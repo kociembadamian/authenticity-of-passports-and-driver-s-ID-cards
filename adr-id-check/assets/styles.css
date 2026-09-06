@@ -1,0 +1,401 @@
+/* adr-id-check — dark "glass" theme in the spirit of the kocie.mba app family */
+
+/* Kolory zestrojone 1:1 z kocie.mba (--bg-color/--text-main/--text-sub/--accent tam
+   odpowiadają --bg/--text/--muted/--accent tutaj) — te same wartości hex, inne nazwy,
+   bo adr-id-check ma dodatkowe komponenty (karty krajów, plakietki dokumentów, kolor
+   ADR, czerwona wskazówka), których kocie.mba jako prosta strona wizytówkowa nie ma. */
+:root {
+  --bg: #f3f5f9;
+  --bg-elevated: #ffffff;
+  --card-bg: #ffffff;
+  --card-border: #e3e6ea;
+  --text: #10151f;
+  --muted: #57626f;
+  --accent: #017ffe;
+  --accent-soft: rgba(1, 127, 254, 0.1);
+  --accent-contrast: #ffffff;
+  --adr: #b3541e;
+  --adr-soft: rgba(179, 84, 30, 0.1);
+  --tip-red: #dc2626;
+  --tip-red-soft: rgba(220, 38, 38, 0.06);
+  --header-bg: rgba(255, 255, 255, 0.72);
+  --shadow: 0 1px 2px rgba(16, 20, 26, 0.06), 0 8px 24px rgba(16, 20, 26, 0.05);
+}
+
+:root:not([data-theme="light"]) {
+  --bg: #0b0d10;
+  --bg-elevated: #14171c;
+  --card-bg: rgba(255, 255, 255, 0.045);
+  --card-border: rgba(255, 255, 255, 0.09);
+  --text: #eef1f6;
+  --muted: #9aa4b2;
+  --accent: #4da3ff;
+  --accent-soft: rgba(77, 163, 255, 0.14);
+  --accent-contrast: #06121f;
+  --adr: #ffab6b;
+  --adr-soft: rgba(255, 171, 107, 0.14);
+  --tip-red: #f87171;
+  --tip-red-soft: rgba(248, 113, 113, 0.12);
+  --header-bg: rgba(11, 13, 16, 0.6);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f3f5f9;
+    --bg-elevated: #ffffff;
+    --card-bg: #ffffff;
+    --card-border: #e3e6ea;
+    --text: #10151f;
+    --muted: #57626f;
+    --accent: #017ffe;
+    --accent-soft: rgba(1, 127, 254, 0.1);
+    --accent-contrast: #ffffff;
+    --adr: #b3541e;
+    --adr-soft: rgba(179, 84, 30, 0.1);
+    --tip-red: #dc2626;
+    --tip-red-soft: rgba(220, 38, 38, 0.06);
+    --header-bg: rgba(255, 255, 255, 0.72);
+    --shadow: 0 1px 2px rgba(16, 20, 26, 0.06), 0 8px 24px rgba(16, 20, 26, 0.05);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0d10;
+  --bg-elevated: #14171c;
+  --card-bg: rgba(255, 255, 255, 0.045);
+  --card-border: rgba(255, 255, 255, 0.09);
+  --text: #eef1f6;
+  --muted: #9aa4b2;
+  --accent: #4da3ff;
+  --accent-soft: rgba(77, 163, 255, 0.14);
+  --accent-contrast: #06121f;
+  --adr: #ffab6b;
+  --adr-soft: rgba(255, 171, 107, 0.14);
+  --tip-red: #f87171;
+  --tip-red-soft: rgba(248, 113, 113, 0.12);
+  --header-bg: rgba(11, 13, 16, 0.6);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { color-scheme: light dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.55;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+a { color: var(--accent); }
+
+/* ---------- Header (liquid-glass) ---------- */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--header-bg);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid var(--card-border);
+}
+.brand { display: flex; align-items: center; gap: 12px; line-height: 1.15; min-width: 0; }
+
+/* Logo — 1:1 z kocie.mba: ta sama znaczona (3 linijki), skalowana identycznym
+   skryptem scaleLogo() do stałej wysokości docelowej, więc proporcje zawsze
+   zostają bit w bit takie same jak w oryginalnym wzorze, niezależnie od motywu.
+   flex-shrink: 0 jest kluczowe — bez tego flexbox potrafi ścisnąć tę ramkę
+   poniżej szerokości ustawionej przez JS (scaleLogo), a że ma overflow:hidden,
+   obcina napis "kocie" po prawej stronie na wąskich ekranach (telefon). */
+.brand-logo-frame { display: inline-block; flex-shrink: 0; overflow: hidden; opacity: 0; transition: opacity .15s ease; text-decoration: none; }
+.brand-logo-frame.ready { opacity: 1; }
+.brand-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding: 32px;
+  background: #ffffff;
+  user-select: none;
+  transform-origin: top left;
+}
+.brand-protocol {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.brand-name {
+  font-size: 72px;
+  font-weight: 900;
+  color: #111111;
+  letter-spacing: -2.5px;
+  line-height: 0.9;
+  margin-bottom: 10px;
+}
+.brand-tld {
+  background-color: #017ffe;
+  color: #ffffff;
+  font-size: 42px;
+  font-weight: 800;
+  border-radius: 14px;
+  letter-spacing: -1px;
+  padding: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-tagline { font-size: 0.68rem; color: var(--muted); max-width: 220px; }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.icon-btn {
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 7px 13px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+.icon-btn svg { width: 16px; height: 16px; }
+
+/* Suwak języka — te same dwa przyciski PL/EN co na kocie.mba (zamiast jednego
+   przełącznika-huśtawki): aktywny język ma wypełnione, kontrastowe tło. */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 4px;
+}
+.lang-switch button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.lang-switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+
+/* ---------- Layout ---------- */
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+.hero { padding: 44px 0 20px; }
+.hero h1 {
+  font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+  line-height: 1.25;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+.hero p { color: var(--muted); margin: 0 0 12px; max-width: 74ch; }
+.hero p a { color: var(--accent); font-weight: 600; }
+.hero p:last-child { margin-bottom: 0; }
+
+.country-map-wrap {
+  position: relative;
+  /* Leaflet uzywa wewnetrznie z-index do 700 (panes/popupy) — bez wlasnego
+     z-index tutaj te warstwy "wyciekaja" ponad sticky naglowek (z-index: 20),
+     bo inaczej porownuja sie z nim bezposrednio zamiast zostac zamkniete w
+     tym kontenerze. z-index: 0 + position: relative tworzy wlasny kontekst
+     stosu, wiec mapa nigdy nie narysuje sie nad paskiem na gorze strony. */
+  z-index: 0;
+  margin: 26px 0 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.country-map-wrap.ready { opacity: 1; }
+.country-map {
+  height: 260px;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  background: var(--card-bg);
+}
+.country-map .leaflet-tile-pane { filter: saturate(0.9); }
+/* OSM nie ma darmowego ciemnego wariantu bez klucza API — w trybie ciemnym
+   po prostu odwracamy kolory kafelków filtrem CSS (typowa, tania sztuczka). */
+.country-map-wrap.is-dark .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) saturate(0.7) brightness(0.92) contrast(0.9);
+}
+.country-map .leaflet-control-attribution {
+  background: var(--header-bg);
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+.country-map .leaflet-control-attribution a { color: var(--muted); }
+@media (max-width: 560px) {
+  .country-map { height: 200px; }
+}
+
+/* Podpowiedź "kliknij, aby przewijać" — znika po pierwszym kliknięciu w mapę. */
+.country-map-hint {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--card-border);
+  pointer-events: none;
+  z-index: 500;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+}
+.country-map-hint.is-hidden { opacity: 0; }
+
+/* Dymek mapy z listą dokumentów danego kraju — te same style co karty. */
+.leaflet-popup-content-wrapper {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.leaflet-popup-tip { background: var(--card-bg); }
+.leaflet-popup-content { margin: 12px 14px; }
+.map-popup-title { font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; }
+.map-popup .note-missing, .map-popup .note-info { font-size: 0.74rem; margin: 0 0 6px; }
+.map-popup .doc-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--muted); }
+
+.search-box { margin: 26px 0 18px; }
+#search {
+  width: 100%;
+  padding: 13px 16px;
+  font-size: 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+#search:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+main.grid {
+  padding: 4px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.country-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+}
+.country-card h3 { margin: 0 0 4px; font-size: 1.02rem; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.name-secondary { color: var(--muted); font-weight: 400; font-size: 0.86rem; }
+.iso3-badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+.adr-since { margin: 0 0 12px; font-size: 0.78rem; color: var(--muted); }
+.note-missing { font-size: 0.78rem; color: var(--adr); margin: 0 0 8px; }
+.note-info { font-size: 0.78rem; color: var(--muted); font-style: italic; margin: 0 0 8px; }
+
+.doc-links { display: flex; flex-wrap: wrap; gap: 7px; }
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 13px;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.doc-link:hover { background: var(--accent); color: var(--accent-contrast); transform: translateY(-1px); }
+.doc-link--adr { color: var(--adr); background: var(--adr-soft); }
+.doc-link--adr:hover { background: var(--adr); color: var(--accent-contrast); }
+.doc-link[aria-disabled="true"] {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.no-results { display: none; color: var(--muted); padding: 30px 0; text-align: center; }
+
+/* ---------- Disclaimer / tip ---------- */
+.notice-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin: 0 0 24px;
+  box-shadow: var(--shadow);
+}
+.notice-card h2 {
+  font-size: 0.95rem;
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+.notice-card p { margin: 0; font-size: 0.9rem; color: var(--text); }
+.notice-card--tip { border: 1.5px solid var(--tip-red); background: var(--tip-red-soft); }
+.notice-card--tip h2 { color: var(--tip-red); }
+.notice-card--top { margin: 0 0 22px; }
+.legal-note { font-size: 0.76rem; color: var(--muted); margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--card-border); }
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 26px 0 50px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+footer .footer-row { margin: 0 0 8px; }
+footer a { color: var(--accent); font-weight: 600; text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+footer .footer-links a { margin-right: 14px; }
+footer .footer-heading { color: var(--text); font-weight: 600; font-size: 0.88rem; }
+footer .footer-muted { font-size: 0.78rem; }
+footer .footer-copyright { margin-top: 14px; font-size: 0.76rem; }
+
+@media (max-width: 560px) {
+  .app-header { padding: 12px 16px; }
+  .wrap { padding: 0 16px; }
+  .hero { padding: 30px 0 14px; }
+}

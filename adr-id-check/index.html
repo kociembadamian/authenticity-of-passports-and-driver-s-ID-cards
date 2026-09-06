@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weryfikacja tożsamości kierowcy ADR — kocie.mba</title>
+<meta name="description" content="Bezpłatny, open source katalog oficjalnych linków PRADO i UNECE do weryfikacji tożsamości i zaświadczeń ADR kierowców zawodowych, dla 54 państw-stron Umowy ADR.">
+<link rel="canonical" href="https://TWOJA-DOMENA.pl/adr-id-check/">
+<meta name="theme-color" content="#0b0d10">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="app-header">
+  <div class="brand">
+    <a class="brand-logo-frame" id="brandLogoFrame" href="https://kocie.mba" target="_blank" rel="noopener" aria-label="kocie.mba">
+      <div class="brand-logo" id="brandLogo">
+        <span class="brand-protocol">https://</span>
+        <span class="brand-name">kocie</span>
+        <div class="brand-tld">.mba</div>
+      </div>
+    </a>
+    <span class="brand-tagline" data-tagline-pl="Doradztwo ADR · Kursy ADR on-line · Rozwiązania dla transportu" data-tagline-en="ADR Consulting · Online ADR Courses · Transport Solutions">Doradztwo ADR · Kursy ADR on-line · Rozwiązania dla transportu</span>
+  </div>
+  <div class="header-actions">
+    <button type="button" class="icon-btn" id="themeToggle" aria-label="Zmień motyw" title="Zmień motyw">
+      <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+    </button>
+    <div class="lang-switch" id="langSwitch" data-title-pl="Weryfikacja tożsamości kierowcy ADR — kocie.mba" data-title-en="ADR Driver Identity Verification — kocie.mba">
+      <button type="button" data-lang="pl">PL</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="lang-content" data-lang-block="pl" lang="pl">
+    <section class="hero">
+      <h1>Sprawdzenie autentyczności dokumentów tożsamości i zaświadczeń ADR wydawanych kierowcom zawodowym</h1>
+      <p>W dobie dynamicznego wzrostu wolumenu przewozowego towarów niebezpiecznych oraz zwiększającego się poziomu zagrożeń terrorystycznych na obszarze Unii Europejskiej, bezwzględna weryfikacja tożsamości personelu transportowego staje się krytycznym ogniwem w mitygacji ryzyka. Priorytet ten dotyczy w szczególności odbioru ładunków zaklasyfikowanych według Umowy ADR jako towary dużego ryzyka lub objętych <a href="https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32019R1148" target="_blank" rel="noopener">wykazem prekursorów materiałów wybuchowych</a>. Wśród złożonych procedur profilaktycznych, podstawowym działaniem pozostaje weryfikacja dokumentów tożsamości (paszportów, dowodów osobistych) oraz uprawnień ADR załogi pojazdu.</p>
+      <p>Wobec braku jednolitego systemu weryfikacyjnego (stan na 2026 rok), oddajemy do użytku otwarty wykaz przekierowujący do autorytatywnych rejestrów zewnętrznych — europejskiej bazy PRADO oraz zasobów UNECE. Projekt został opublikowany na licencji open source w serwisie <a href="#" target="_blank" rel="noopener">GitHub</a>. Umożliwiamy w ten sposób jego swobodną redystrybucję i adaptację w wewnętrznych systemach firm logistycznych, przy zachowaniu wzmianki o autorstwie i odnośników do oficjalnych źródeł, które są wymaganiem Unii Europejskiej oraz UNECE.</p>
+    </section>
+
+    <div class="notice-card notice-card--tip notice-card--top">
+      <h2>Instrukcje</h2>
+      <p>Sprawdzając elementy zabezpieczające dokumentu: <strong>DOTYKAJ, OGLĄDAJ, ZMIENIAJ KĄT PATRZENIA!</strong></p>
+      <p>Jeżeli kierowca bądź inny człowiek załogi przedstawi Ci dokument, który różni się od tych zawartych w rejestrze, poproś o inny dokument. Jeżeli w rejestrach brakuje oficjalnego wzoru dokumentu, skontaktuj się z osobami odpowiedzialnymi za tworzenie i aktualizacje planów bezpieczeństwa w przedsiębiorstwie.</p>
+    </div>
+
+    <div class="search-box">
+      <input class="lang-search-input" type="text" placeholder="Szukaj kraju…" autocomplete="off">
+    </div>
+
+    <main class="grid">
+      <article class="country-card" data-name="albania albania alb" data-iso3="ALB">
+        <h3>Albania <span class="name-secondary">(Albania)</span><span class="iso3-badge">ALB</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2005-01-26</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_0" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="andora andorra and" data-iso3="AND">
+        <h3>Andora <span class="name-secondary">(Andorra)</span><span class="iso3-badge">AND</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2009-03-09</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_1" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="armenia armenia arm" data-iso3="ARM">
+        <h3>Armenia <span class="name-secondary">(Armenia)</span><span class="iso3-badge">ARM</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2022-04-12</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_2" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="austria austria aut" data-iso3="AUT">
+        <h3>Austria <span class="name-secondary">(Austria)</span><span class="iso3-badge">AUT</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1973-09-20</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_3" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="azerbejdżan azerbaijan aze" data-iso3="AZE">
+        <h3>Azerbejdżan <span class="name-secondary">(Azerbaijan)</span><span class="iso3-badge">AZE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2000-09-28</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_4" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="białoruś belarus blr" data-iso3="BLR">
+        <h3>Białoruś <span class="name-secondary">(Belarus)</span><span class="iso3-badge">BLR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1993-04-05</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_5" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="belgia belgium bel" data-iso3="BEL">
+        <h3>Belgia <span class="name-secondary">(Belgium)</span><span class="iso3-badge">BEL</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1960-08-25</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_6" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="bośnia i hercegowina bosnia and herzegovina bih" data-iso3="BIH">
+        <h3>Bośnia i Hercegowina <span class="name-secondary">(Bosnia and Herzegovina)</span><span class="iso3-badge">BIH</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1993-09-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_7" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="bułgaria bulgaria bgr" data-iso3="BGR">
+        <h3>Bułgaria <span class="name-secondary">(Bulgaria)</span><span class="iso3-badge">BGR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1995-05-12</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_8" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="chorwacja croatia hrv" data-iso3="HRV">
+        <h3>Chorwacja <span class="name-secondary">(Croatia)</span><span class="iso3-badge">HRV</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1992-11-23</p>
+        <p class="note-info">Uwaga: na zdjęciu zaświadczenia w rejestrze UNECE widoczny jest po lewej stronie pasek pochodzący z zewnętrznego programu do podglądu obrazów — nie jest to element samego zaświadczenia ADR.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_9" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="cypr cyprus cyp" data-iso3="CYP">
+        <h3>Cypr <span class="name-secondary">(Cyprus)</span><span class="iso3-badge">CYP</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2004-04-19</p>
+        <p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_10" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="czechy czech republic cze" data-iso3="CZE">
+        <h3>Czechy <span class="name-secondary">(Czech Republic)</span><span class="iso3-badge">CZE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1993-06-02</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_11" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="dania denmark dnk" data-iso3="DNK">
+        <h3>Dania <span class="name-secondary">(Denmark)</span><span class="iso3-badge">DNK</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1981-07-01</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_12" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="estonia estonia est" data-iso3="EST">
+        <h3>Estonia <span class="name-secondary">(Estonia)</span><span class="iso3-badge">EST</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1996-06-25</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_13" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="finlandia finland fin" data-iso3="FIN">
+        <h3>Finlandia <span class="name-secondary">(Finland)</span><span class="iso3-badge">FIN</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1979-02-28</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_14" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="francja france fra" data-iso3="FRA">
+        <h3>Francja <span class="name-secondary">(France)</span><span class="iso3-badge">FRA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1960-02-02</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_15" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="gruzja georgia geo" data-iso3="GEO">
+        <h3>Gruzja <span class="name-secondary">(Georgia)</span><span class="iso3-badge">GEO</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2016-09-19</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_16" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="niemcy germany deu" data-iso3="DEU">
+        <h3>Niemcy <span class="name-secondary">(Germany)</span><span class="iso3-badge">DEU</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1969-12-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_17" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="grecja greece grc" data-iso3="GRC">
+        <h3>Grecja <span class="name-secondary">(Greece)</span><span class="iso3-badge">GRC</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1988-05-27</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_18" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="węgry hungary hun" data-iso3="HUN">
+        <h3>Węgry <span class="name-secondary">(Hungary)</span><span class="iso3-badge">HUN</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1979-07-19</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_19" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="islandia iceland isl" data-iso3="ISL">
+        <h3>Islandia <span class="name-secondary">(Iceland)</span><span class="iso3-badge">ISL</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2011-02-24</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_20" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="irlandia ireland irl" data-iso3="IRL">
+        <h3>Irlandia <span class="name-secondary">(Ireland)</span><span class="iso3-badge">IRL</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2006-10-12</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_21" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="włochy italy ita" data-iso3="ITA">
+        <h3>Włochy <span class="name-secondary">(Italy)</span><span class="iso3-badge">ITA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1963-06-03</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_22" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="kazachstan kazakhstan kaz" data-iso3="KAZ">
+        <h3>Kazachstan <span class="name-secondary">(Kazakhstan)</span><span class="iso3-badge">KAZ</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2001-07-26</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_23" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="kirgistan kyrgyzstan kgz" data-iso3="KGZ">
+        <h3>Kirgistan <span class="name-secondary">(Kyrgyzstan)</span><span class="iso3-badge">KGZ</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2025-07-18</p>
+        <p class="note-missing">Brak wzoru zaświadczenia na stronie UNECE.</p><p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="łotwa latvia lva" data-iso3="LVA">
+        <h3>Łotwa <span class="name-secondary">(Latvia)</span><span class="iso3-badge">LVA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1996-04-11</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_24" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="liechtenstein liechtenstein lie" data-iso3="LIE">
+        <h3>Liechtenstein <span class="name-secondary">(Liechtenstein)</span><span class="iso3-badge">LIE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1994-12-12</p>
+        <p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_25" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="litwa lithuania ltu" data-iso3="LTU">
+        <h3>Litwa <span class="name-secondary">(Lithuania)</span><span class="iso3-badge">LTU</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1995-12-07</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_26" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="luksemburg luxembourg lux" data-iso3="LUX">
+        <h3>Luksemburg <span class="name-secondary">(Luxembourg)</span><span class="iso3-badge">LUX</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1970-07-21</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_27" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="malta malta mlt" data-iso3="MLT">
+        <h3>Malta <span class="name-secondary">(Malta)</span><span class="iso3-badge">MLT</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2007-05-08</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_28" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="czarnogóra montenegro mne" data-iso3="MNE">
+        <h3>Czarnogóra <span class="name-secondary">(Montenegro)</span><span class="iso3-badge">MNE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2006-10-23</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_29" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="maroko morocco mar" data-iso3="MAR">
+        <h3>Maroko <span class="name-secondary">(Morocco)</span><span class="iso3-badge">MAR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2001-05-11</p>
+        <p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_30" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="holandia netherlands nld" data-iso3="NLD">
+        <h3>Holandia <span class="name-secondary">(Netherlands)</span><span class="iso3-badge">NLD</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1963-11-01</p>
+        <p class="note-info">Uwaga: w obiegu funkcjonują trzy różne wzory holenderskiego zaświadczenia ADR (zmiana logo, a później całego wzoru) — różnice w wyglądzie między starszym a nowszym dokumentem same w sobie nie oznaczają, że dokument jest nieautentyczny.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_31" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="nigeria nigeria nga" data-iso3="NGA">
+        <h3>Nigeria <span class="name-secondary">(Nigeria)</span><span class="iso3-badge">NGA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2018-10-18</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_32" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="macedonia północna north macedonia mkd" data-iso3="MKD">
+        <h3>Macedonia Północna <span class="name-secondary">(North Macedonia)</span><span class="iso3-badge">MKD</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1997-04-18</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_33" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="norwegia norway nor" data-iso3="NOR">
+        <h3>Norwegia <span class="name-secondary">(Norway)</span><span class="iso3-badge">NOR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1976-02-05</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_34" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="polska poland pol" data-iso3="POL">
+        <h3>Polska <span class="name-secondary">(Poland)</span><span class="iso3-badge">POL</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1975-05-06</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_35" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="portugalia portugal prt" data-iso3="PRT">
+        <h3>Portugalia <span class="name-secondary">(Portugal)</span><span class="iso3-badge">PRT</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1967-12-29</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_36" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="mołdawia republic of moldova mda" data-iso3="MDA">
+        <h3>Mołdawia <span class="name-secondary">(Republic of Moldova)</span><span class="iso3-badge">MDA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1998-07-14</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_37" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="rumunia romania rou" data-iso3="ROU">
+        <h3>Rumunia <span class="name-secondary">(Romania)</span><span class="iso3-badge">ROU</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1994-06-08</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_38" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="rosja russian federation rus" data-iso3="RUS">
+        <h3>Rosja <span class="name-secondary">(Russian Federation)</span><span class="iso3-badge">RUS</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1994-04-28</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_39" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="san marino san marino smr" data-iso3="SMR">
+        <h3>San Marino <span class="name-secondary">(San Marino)</span><span class="iso3-badge">SMR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2018-01-15</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_40" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="serbia serbia srb" data-iso3="SRB">
+        <h3>Serbia <span class="name-secondary">(Serbia)</span><span class="iso3-badge">SRB</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2001-03-12</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_41" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="słowacja slovakia svk" data-iso3="SVK">
+        <h3>Słowacja <span class="name-secondary">(Slovakia)</span><span class="iso3-badge">SVK</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1993-05-28</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_42" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="słowenia slovenia svn" data-iso3="SVN">
+        <h3>Słowenia <span class="name-secondary">(Slovenia)</span><span class="iso3-badge">SVN</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1992-07-06</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_43" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="hiszpania spain esp" data-iso3="ESP">
+        <h3>Hiszpania <span class="name-secondary">(Spain)</span><span class="iso3-badge">ESP</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1972-11-22</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_44" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="szwecja sweden swe" data-iso3="SWE">
+        <h3>Szwecja <span class="name-secondary">(Sweden)</span><span class="iso3-badge">SWE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1974-03-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_45" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="szwajcaria switzerland che" data-iso3="CHE">
+        <h3>Szwajcaria <span class="name-secondary">(Switzerland)</span><span class="iso3-badge">CHE</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1972-06-20</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_46" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="tadżykistan tajikistan tjk" data-iso3="TJK">
+        <h3>Tadżykistan <span class="name-secondary">(Tajikistan)</span><span class="iso3-badge">TJK</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2011-12-28</p>
+        <p class="note-missing">Brak odrębnego wpisu w PRADO dla tego kraju.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_47" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="tunezja tunisia tun" data-iso3="TUN">
+        <h3>Tunezja <span class="name-secondary">(Tunisia)</span><span class="iso3-badge">TUN</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2008-09-03</p>
+        <p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_48" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="turcja türkiye tur" data-iso3="TUR">
+        <h3>Turcja <span class="name-secondary">(Türkiye)</span><span class="iso3-badge">TUR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2010-02-22</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_49" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="ukraina ukraine ukr" data-iso3="UKR">
+        <h3>Ukraina <span class="name-secondary">(Ukraine)</span><span class="iso3-badge">UKR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2000-05-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_50" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="uganda uganda uga" data-iso3="UGA">
+        <h3>Uganda <span class="name-secondary">(Uganda)</span><span class="iso3-badge">UGA</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2022-08-23</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Prawo jazdy: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p><p class="note-missing">Zaświadczenie ADR: rejestr UNECE ma wpis dla tego kraju, ale nie zawiera jeszcze wzoru.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><!-- Wylaczone (PRADO / prawo jazdy, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a> -->
+      <span class="doc-link" aria-disabled="true">Prawo jazdy</span><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_51" target="_blank" rel="noopener">Zaświadczenie ADR</a> -->
+      <span class="doc-link" aria-disabled="true">Zaświadczenie ADR</span></div>
+      </article>
+      <article class="country-card" data-name="wielka brytania united kingdom gbr" data-iso3="GBR">
+        <h3>Wielka Brytania <span class="name-secondary">(United Kingdom)</span><span class="iso3-badge">GBR</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 1968-06-29</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_52" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+      <article class="country-card" data-name="uzbekistan uzbekistan uzb" data-iso3="UZB">
+        <h3>Uzbekistan <span class="name-secondary">(Uzbekistan)</span><span class="iso3-badge">UZB</span></h3>
+        <p class="adr-since">Strona Umowy ADR od: 2020-01-24</p>
+        <p class="note-missing">Dowód osobisty: link tymczasowo wyłączony — PRADO obecnie nie posiada wzoru tego dokumentu. Link zostanie dodany, gdy dokument pojawi się w PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/b/docs-per-category.html" target="_blank" rel="noopener">Dowód osobisty</a> -->
+      <span class="doc-link" aria-disabled="true">Dowód osobisty</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/a/docs-per-category.html" target="_blank" rel="noopener">Paszport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/f/docs-per-category.html" target="_blank" rel="noopener">Prawo jazdy</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_53" target="_blank" rel="noopener">Zaświadczenie ADR</a></div>
+      </article>
+    </main>
+    <p class="no-results">Brak wyników.</p>
+
+    <div class="notice-card">
+      <h2>Wyłączenie odpowiedzialności</h2>
+      <p>Ten serwis nie przechowuje ani nie wyświetla żadnych zdjęć dokumentów — każdy przycisk to zwykły link, który otwiera oficjalną stronę PRADO (Rady UE) lub UNECE w nowej karcie. Nie ponosimy odpowiedzialności za treść stron zewnętrznych ani nie gwarantujemy autentyczności okazanego dokumentu — ostateczna ocena należy zawsze do osoby weryfikującej. To narzędzie pomocnicze, nie zastępuje ono weryfikacji zgodnej z obowiązującymi przepisami.</p>
+    </div>
+
+    <p class="legal-note">Hiperlinkowanie do stron PRADO jest wprost dozwolone przez ich regulamin bez potrzeby dodatkowej zgody — w przeciwieństwie do kopiowania, ramkowania (iframe) lub mirrorowania ich treści, czego ta strona celowo nie robi.</p>
+
+    <footer>
+      <p class="footer-row footer-heading">Autor rozwiązania: DGSA drs. D. Kociemba — <a href="https://kocie.mba" target="_blank" rel="noopener">kocie.mba</a></p>
+      <p class="footer-row">Skontaktuj się z nami: <a href="mailto:damian@kocie.mba">damian@kocie.mba</a> &middot; tel. (PL): <a href="tel:+48728719527">+48 728 719 527</a> / tel. (NL): <a href="tel:+31640668505">+31 6 40 66 85 05</a></p>
+      <p class="footer-row footer-muted">Spalaan 6, 5628 ZG Eindhoven (NL) &middot; KvK: 95907130 &middot; BTW/VAT: NL005178103B20</p>
+      <p class="footer-row footer-links">
+        Źródła:
+        <a href="https://www.consilium.europa.eu/prado/en/prado-start-page.html" target="_blank" rel="noopener">PRADO</a>
+        <a href="https://unece.org/transport/dangerous-goods/adr-certificates" target="_blank" rel="noopener">UNECE — ADR Certificates</a>
+        <a href="https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&amp;mtdsg_no=XI-B-14&amp;chapter=11&amp;clang=_en" target="_blank" rel="noopener">UN Treaty Collection — ADR status</a>
+      </p>
+      <p class="footer-row">Kod i treść tej strony możesz swobodnie wykorzystać i zmodyfikować (open source) — prosimy tylko o wskazanie źródła: <a href="#" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-row footer-copyright">&copy; Copyright 2026 &ndash; &#8734; kocie.mba &middot; Jesteśmy częścią noviqa.group</p>
+    </footer>
+    <!-- build: 2026-09-05 17:30 · Linki nie byly jeszcze automatycznie sprawdzane w tym uruchomieniu. · 55 krajów -->
+  </div>
+  <div class="lang-content" data-lang-block="en" lang="en" hidden>
+    <section class="hero">
+      <h1>Checking the authenticity of identity documents and ADR certificates issued to professional drivers</h1>
+      <p>In an era of rapidly growing dangerous-goods transport volumes and rising terrorist threat levels across the European Union, rigorous identity verification of transport personnel has become a critical link in risk mitigation. This is especially true when collecting shipments classified under the ADR Agreement as high-consequence dangerous goods or substances listed as <a href="https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32019R1148" target="_blank" rel="noopener">explosives precursors</a>. Among the layered preventive procedures, the baseline action remains verifying the crew's identity documents (passports, ID cards) and ADR credentials.</p>
+      <p>In the absence of a unified verification system (as of 2026), we provide an open directory redirecting to authoritative external registers — the European PRADO database and UNECE resources. The project is published under an open source licence on <a href="#" target="_blank" rel="noopener">GitHub</a>, allowing free redistribution and adaptation within logistics companies' internal systems, provided attribution and links to the official sources — a requirement of the European Union and UNECE — are retained.</p>
+    </section>
+
+    <div class="notice-card notice-card--tip notice-card--top">
+      <h2>Instructions</h2>
+      <p>When checking a document's security features: <strong>TOUCH IT, LOOK AT IT, TILT IT!</strong></p>
+      <p>If the driver or another crew member presents a document that differs from those in the register, ask for a different document. If the register doesn't yet have an official specimen for that document, contact the people responsible for creating and maintaining your company's security plans.</p>
+    </div>
+
+    <div class="search-box">
+      <input class="lang-search-input" type="text" placeholder="Search country…" autocomplete="off">
+    </div>
+
+    <main class="grid">
+      <article class="country-card" data-name="albania albania alb" data-iso3="ALB">
+        <h3>Albania <span class="name-secondary">(Albania)</span><span class="iso3-badge">ALB</span></h3>
+        <p class="adr-since">ADR contracting party since: 2005-01-26</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/alb/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_0" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="andora andorra and" data-iso3="AND">
+        <h3>Andorra <span class="name-secondary">(Andora)</span><span class="iso3-badge">AND</span></h3>
+        <p class="adr-since">ADR contracting party since: 2009-03-09</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/and/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_1" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="armenia armenia arm" data-iso3="ARM">
+        <h3>Armenia <span class="name-secondary">(Armenia)</span><span class="iso3-badge">ARM</span></h3>
+        <p class="adr-since">ADR contracting party since: 2022-04-12</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/arm/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_2" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="austria austria aut" data-iso3="AUT">
+        <h3>Austria <span class="name-secondary">(Austria)</span><span class="iso3-badge">AUT</span></h3>
+        <p class="adr-since">ADR contracting party since: 1973-09-20</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aut/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_3" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="azerbejdżan azerbaijan aze" data-iso3="AZE">
+        <h3>Azerbaijan <span class="name-secondary">(Azerbejdżan)</span><span class="iso3-badge">AZE</span></h3>
+        <p class="adr-since">ADR contracting party since: 2000-09-28</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/aze/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_4" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="białoruś belarus blr" data-iso3="BLR">
+        <h3>Belarus <span class="name-secondary">(Białoruś)</span><span class="iso3-badge">BLR</span></h3>
+        <p class="adr-since">ADR contracting party since: 1993-04-05</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/blr/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_5" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="belgia belgium bel" data-iso3="BEL">
+        <h3>Belgium <span class="name-secondary">(Belgia)</span><span class="iso3-badge">BEL</span></h3>
+        <p class="adr-since">ADR contracting party since: 1960-08-25</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bel/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_6" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="bośnia i hercegowina bosnia and herzegovina bih" data-iso3="BIH">
+        <h3>Bosnia and Herzegovina <span class="name-secondary">(Bośnia i Hercegowina)</span><span class="iso3-badge">BIH</span></h3>
+        <p class="adr-since">ADR contracting party since: 1993-09-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bih/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_7" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="bułgaria bulgaria bgr" data-iso3="BGR">
+        <h3>Bulgaria <span class="name-secondary">(Bułgaria)</span><span class="iso3-badge">BGR</span></h3>
+        <p class="adr-since">ADR contracting party since: 1995-05-12</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/bgr/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_8" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="chorwacja croatia hrv" data-iso3="HRV">
+        <h3>Croatia <span class="name-secondary">(Chorwacja)</span><span class="iso3-badge">HRV</span></h3>
+        <p class="adr-since">ADR contracting party since: 1992-11-23</p>
+        <p class="note-info">Note: in the UNECE register, the certificate photo shows a strip on the left side coming from an external image-viewer overlay — it is not part of the actual ADR certificate.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hrv/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_9" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="cypr cyprus cyp" data-iso3="CYP">
+        <h3>Cyprus <span class="name-secondary">(Cypr)</span><span class="iso3-badge">CYP</span></h3>
+        <p class="adr-since">ADR contracting party since: 2004-04-19</p>
+        <p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cyp/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_10" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="czechy czech republic cze" data-iso3="CZE">
+        <h3>Czech Republic <span class="name-secondary">(Czechy)</span><span class="iso3-badge">CZE</span></h3>
+        <p class="adr-since">ADR contracting party since: 1993-06-02</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/cze/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_11" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="dania denmark dnk" data-iso3="DNK">
+        <h3>Denmark <span class="name-secondary">(Dania)</span><span class="iso3-badge">DNK</span></h3>
+        <p class="adr-since">ADR contracting party since: 1981-07-01</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/dnk/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_12" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="estonia estonia est" data-iso3="EST">
+        <h3>Estonia <span class="name-secondary">(Estonia)</span><span class="iso3-badge">EST</span></h3>
+        <p class="adr-since">ADR contracting party since: 1996-06-25</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/est/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_13" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="finlandia finland fin" data-iso3="FIN">
+        <h3>Finland <span class="name-secondary">(Finlandia)</span><span class="iso3-badge">FIN</span></h3>
+        <p class="adr-since">ADR contracting party since: 1979-02-28</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fin/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_14" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="francja france fra" data-iso3="FRA">
+        <h3>France <span class="name-secondary">(Francja)</span><span class="iso3-badge">FRA</span></h3>
+        <p class="adr-since">ADR contracting party since: 1960-02-02</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/fra/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_15" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="gruzja georgia geo" data-iso3="GEO">
+        <h3>Georgia <span class="name-secondary">(Gruzja)</span><span class="iso3-badge">GEO</span></h3>
+        <p class="adr-since">ADR contracting party since: 2016-09-19</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/geo/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_16" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="niemcy germany deu" data-iso3="DEU">
+        <h3>Germany <span class="name-secondary">(Niemcy)</span><span class="iso3-badge">DEU</span></h3>
+        <p class="adr-since">ADR contracting party since: 1969-12-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/deu/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_17" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="grecja greece grc" data-iso3="GRC">
+        <h3>Greece <span class="name-secondary">(Grecja)</span><span class="iso3-badge">GRC</span></h3>
+        <p class="adr-since">ADR contracting party since: 1988-05-27</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/grc/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_18" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="węgry hungary hun" data-iso3="HUN">
+        <h3>Hungary <span class="name-secondary">(Węgry)</span><span class="iso3-badge">HUN</span></h3>
+        <p class="adr-since">ADR contracting party since: 1979-07-19</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/hun/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_19" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="islandia iceland isl" data-iso3="ISL">
+        <h3>Iceland <span class="name-secondary">(Islandia)</span><span class="iso3-badge">ISL</span></h3>
+        <p class="adr-since">ADR contracting party since: 2011-02-24</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/isl/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_20" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="irlandia ireland irl" data-iso3="IRL">
+        <h3>Ireland <span class="name-secondary">(Irlandia)</span><span class="iso3-badge">IRL</span></h3>
+        <p class="adr-since">ADR contracting party since: 2006-10-12</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/irl/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_21" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="włochy italy ita" data-iso3="ITA">
+        <h3>Italy <span class="name-secondary">(Włochy)</span><span class="iso3-badge">ITA</span></h3>
+        <p class="adr-since">ADR contracting party since: 1963-06-03</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ita/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_22" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="kazachstan kazakhstan kaz" data-iso3="KAZ">
+        <h3>Kazakhstan <span class="name-secondary">(Kazachstan)</span><span class="iso3-badge">KAZ</span></h3>
+        <p class="adr-since">ADR contracting party since: 2001-07-26</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kaz/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_23" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="kirgistan kyrgyzstan kgz" data-iso3="KGZ">
+        <h3>Kyrgyzstan <span class="name-secondary">(Kirgistan)</span><span class="iso3-badge">KGZ</span></h3>
+        <p class="adr-since">ADR contracting party since: 2025-07-18</p>
+        <p class="note-missing">No certificate specimen on the UNECE page.</p><p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/kgz/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="łotwa latvia lva" data-iso3="LVA">
+        <h3>Latvia <span class="name-secondary">(Łotwa)</span><span class="iso3-badge">LVA</span></h3>
+        <p class="adr-since">ADR contracting party since: 1996-04-11</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lva/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_24" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="liechtenstein liechtenstein lie" data-iso3="LIE">
+        <h3>Liechtenstein <span class="name-secondary">(Liechtenstein)</span><span class="iso3-badge">LIE</span></h3>
+        <p class="adr-since">ADR contracting party since: 1994-12-12</p>
+        <p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lie/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_25" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="litwa lithuania ltu" data-iso3="LTU">
+        <h3>Lithuania <span class="name-secondary">(Litwa)</span><span class="iso3-badge">LTU</span></h3>
+        <p class="adr-since">ADR contracting party since: 1995-12-07</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ltu/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_26" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="luksemburg luxembourg lux" data-iso3="LUX">
+        <h3>Luxembourg <span class="name-secondary">(Luksemburg)</span><span class="iso3-badge">LUX</span></h3>
+        <p class="adr-since">ADR contracting party since: 1970-07-21</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/lux/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_27" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="malta malta mlt" data-iso3="MLT">
+        <h3>Malta <span class="name-secondary">(Malta)</span><span class="iso3-badge">MLT</span></h3>
+        <p class="adr-since">ADR contracting party since: 2007-05-08</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mlt/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_28" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="czarnogóra montenegro mne" data-iso3="MNE">
+        <h3>Montenegro <span class="name-secondary">(Czarnogóra)</span><span class="iso3-badge">MNE</span></h3>
+        <p class="adr-since">ADR contracting party since: 2006-10-23</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mne/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_29" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="maroko morocco mar" data-iso3="MAR">
+        <h3>Morocco <span class="name-secondary">(Maroko)</span><span class="iso3-badge">MAR</span></h3>
+        <p class="adr-since">ADR contracting party since: 2001-05-11</p>
+        <p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mar/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_30" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="holandia netherlands nld" data-iso3="NLD">
+        <h3>Netherlands <span class="name-secondary">(Holandia)</span><span class="iso3-badge">NLD</span></h3>
+        <p class="adr-since">ADR contracting party since: 1963-11-01</p>
+        <p class="note-info">Note: three different official Dutch ADR certificate templates are currently in circulation (a logo change, later a full template redesign) — a visual difference between an older and a newer certificate does not by itself mean the document is inauthentic.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nld/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_31" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="nigeria nigeria nga" data-iso3="NGA">
+        <h3>Nigeria <span class="name-secondary">(Nigeria)</span><span class="iso3-badge">NGA</span></h3>
+        <p class="adr-since">ADR contracting party since: 2018-10-18</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nga/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_32" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="macedonia północna north macedonia mkd" data-iso3="MKD">
+        <h3>North Macedonia <span class="name-secondary">(Macedonia Północna)</span><span class="iso3-badge">MKD</span></h3>
+        <p class="adr-since">ADR contracting party since: 1997-04-18</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mkd/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_33" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="norwegia norway nor" data-iso3="NOR">
+        <h3>Norway <span class="name-secondary">(Norwegia)</span><span class="iso3-badge">NOR</span></h3>
+        <p class="adr-since">ADR contracting party since: 1976-02-05</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/nor/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_34" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="polska poland pol" data-iso3="POL">
+        <h3>Poland <span class="name-secondary">(Polska)</span><span class="iso3-badge">POL</span></h3>
+        <p class="adr-since">ADR contracting party since: 1975-05-06</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/pol/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_35" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="portugalia portugal prt" data-iso3="PRT">
+        <h3>Portugal <span class="name-secondary">(Portugalia)</span><span class="iso3-badge">PRT</span></h3>
+        <p class="adr-since">ADR contracting party since: 1967-12-29</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/prt/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_36" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="mołdawia republic of moldova mda" data-iso3="MDA">
+        <h3>Republic of Moldova <span class="name-secondary">(Mołdawia)</span><span class="iso3-badge">MDA</span></h3>
+        <p class="adr-since">ADR contracting party since: 1998-07-14</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/mda/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_37" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="rumunia romania rou" data-iso3="ROU">
+        <h3>Romania <span class="name-secondary">(Rumunia)</span><span class="iso3-badge">ROU</span></h3>
+        <p class="adr-since">ADR contracting party since: 1994-06-08</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rou/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_38" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="rosja russian federation rus" data-iso3="RUS">
+        <h3>Russian Federation <span class="name-secondary">(Rosja)</span><span class="iso3-badge">RUS</span></h3>
+        <p class="adr-since">ADR contracting party since: 1994-04-28</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/rus/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_39" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="san marino san marino smr" data-iso3="SMR">
+        <h3>San Marino <span class="name-secondary">(San Marino)</span><span class="iso3-badge">SMR</span></h3>
+        <p class="adr-since">ADR contracting party since: 2018-01-15</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/smr/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_40" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="serbia serbia srb" data-iso3="SRB">
+        <h3>Serbia <span class="name-secondary">(Serbia)</span><span class="iso3-badge">SRB</span></h3>
+        <p class="adr-since">ADR contracting party since: 2001-03-12</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/srb/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_41" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="słowacja slovakia svk" data-iso3="SVK">
+        <h3>Slovakia <span class="name-secondary">(Słowacja)</span><span class="iso3-badge">SVK</span></h3>
+        <p class="adr-since">ADR contracting party since: 1993-05-28</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svk/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_42" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="słowenia slovenia svn" data-iso3="SVN">
+        <h3>Slovenia <span class="name-secondary">(Słowenia)</span><span class="iso3-badge">SVN</span></h3>
+        <p class="adr-since">ADR contracting party since: 1992-07-06</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/svn/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_43" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="hiszpania spain esp" data-iso3="ESP">
+        <h3>Spain <span class="name-secondary">(Hiszpania)</span><span class="iso3-badge">ESP</span></h3>
+        <p class="adr-since">ADR contracting party since: 1972-11-22</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/esp/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_44" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="szwecja sweden swe" data-iso3="SWE">
+        <h3>Sweden <span class="name-secondary">(Szwecja)</span><span class="iso3-badge">SWE</span></h3>
+        <p class="adr-since">ADR contracting party since: 1974-03-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/swe/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_45" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="szwajcaria switzerland che" data-iso3="CHE">
+        <h3>Switzerland <span class="name-secondary">(Szwajcaria)</span><span class="iso3-badge">CHE</span></h3>
+        <p class="adr-since">ADR contracting party since: 1972-06-20</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/che/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_46" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="tadżykistan tajikistan tjk" data-iso3="TJK">
+        <h3>Tajikistan <span class="name-secondary">(Tadżykistan)</span><span class="iso3-badge">TJK</span></h3>
+        <p class="adr-since">ADR contracting party since: 2011-12-28</p>
+        <p class="note-missing">No separate PRADO entry for this country.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_47" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="tunezja tunisia tun" data-iso3="TUN">
+        <h3>Tunisia <span class="name-secondary">(Tunezja)</span><span class="iso3-badge">TUN</span></h3>
+        <p class="adr-since">ADR contracting party since: 2008-09-03</p>
+        <p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tun/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_48" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="turcja türkiye tur" data-iso3="TUR">
+        <h3>Türkiye <span class="name-secondary">(Turcja)</span><span class="iso3-badge">TUR</span></h3>
+        <p class="adr-since">ADR contracting party since: 2010-02-22</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/tur/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_49" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="ukraina ukraine ukr" data-iso3="UKR">
+        <h3>Ukraine <span class="name-secondary">(Ukraina)</span><span class="iso3-badge">UKR</span></h3>
+        <p class="adr-since">ADR contracting party since: 2000-05-01</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/ukr/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_50" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="uganda uganda uga" data-iso3="UGA">
+        <h3>Uganda <span class="name-secondary">(Uganda)</span><span class="iso3-badge">UGA</span></h3>
+        <p class="adr-since">ADR contracting party since: 2022-08-23</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">Driving licence: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p><p class="note-missing">ADR certificate: the UNECE register has an entry for this country, but no specimen yet.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><!-- Wylaczone (PRADO / prawo jazdy, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uga/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a> -->
+      <span class="doc-link" aria-disabled="true">Driving licence</span><!-- Wylaczone (UNECE / zaswiadczenie ADR, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_51" target="_blank" rel="noopener">ADR certificate</a> -->
+      <span class="doc-link" aria-disabled="true">ADR certificate</span></div>
+      </article>
+      <article class="country-card" data-name="wielka brytania united kingdom gbr" data-iso3="GBR">
+        <h3>United Kingdom <span class="name-secondary">(Wielka Brytania)</span><span class="iso3-badge">GBR</span></h3>
+        <p class="adr-since">ADR contracting party since: 1968-06-29</p>
+        
+        <div class="doc-links"><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/gbr/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_52" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+      <article class="country-card" data-name="uzbekistan uzbekistan uzb" data-iso3="UZB">
+        <h3>Uzbekistan <span class="name-secondary">(Uzbekistan)</span><span class="iso3-badge">UZB</span></h3>
+        <p class="adr-since">ADR contracting party since: 2020-01-24</p>
+        <p class="note-missing">ID card: link temporarily disabled — PRADO currently doesn't have a specimen of this document. The link will be added once the document appears in PRADO.</p>
+        <div class="doc-links"><!-- Wylaczone (PRADO / dowod osobisty, sprawdzone 2026-09-04). Docelowy link:
+     <a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/b/docs-per-category.html" target="_blank" rel="noopener">ID card</a> -->
+      <span class="doc-link" aria-disabled="true">ID card</span><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/a/docs-per-category.html" target="_blank" rel="noopener">Passport</a><a class="doc-link" href="https://www.consilium.europa.eu/prado/en/prado-documents/uzb/f/docs-per-category.html" target="_blank" rel="noopener">Driving licence</a><a class="doc-link" href="https://unece.org/transport/dangerous-goods/adr-certificates#accordion_53" target="_blank" rel="noopener">ADR certificate</a></div>
+      </article>
+    </main>
+    <p class="no-results">No results.</p>
+
+    <div class="notice-card">
+      <h2>Disclaimer</h2>
+      <p>This site does not store or display any document images — every button is a plain link that opens the official PRADO (Council of the EU) or UNECE page in a new tab. We are not responsible for the content of external sites and do not guarantee the authenticity of any document shown to you — the final judgement always rests with the person carrying out the check. This is a helper tool, not a substitute for verification under applicable law.</p>
+    </div>
+
+    <p class="legal-note">Linking to PRADO pages is explicitly permitted under their terms without further permission — unlike copying, framing (iframe) or mirroring their content, which this site deliberately does not do.</p>
+
+    <footer>
+      <p class="footer-row footer-heading">Built by: DGSA drs. D. Kociemba — <a href="https://kocie.mba" target="_blank" rel="noopener">kocie.mba</a></p>
+      <p class="footer-row">Get in touch: <a href="mailto:damian@kocie.mba">damian@kocie.mba</a> &middot; phone (PL): <a href="tel:+48728719527">+48 728 719 527</a> / phone (NL): <a href="tel:+31640668505">+31 6 40 66 85 05</a></p>
+      <p class="footer-row footer-muted">Spalaan 6, 5628 ZG Eindhoven (NL) &middot; KvK: 95907130 &middot; BTW/VAT: NL005178103B20</p>
+      <p class="footer-row footer-links">
+        Sources:
+        <a href="https://www.consilium.europa.eu/prado/en/prado-start-page.html" target="_blank" rel="noopener">PRADO</a>
+        <a href="https://unece.org/transport/dangerous-goods/adr-certificates" target="_blank" rel="noopener">UNECE — ADR Certificates</a>
+        <a href="https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&amp;mtdsg_no=XI-B-14&amp;chapter=11&amp;clang=_en" target="_blank" rel="noopener">UN Treaty Collection — ADR status</a>
+      </p>
+      <p class="footer-row">The code and content of this site are free to use and modify (open source) — please just credit the source: <a href="#" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="footer-row footer-copyright">&copy; Copyright 2026 &ndash; &#8734; kocie.mba &middot; Part of noviqa.group</p>
+    </footer>
+    <!-- build: 2026-09-05 17:30 · Linki nie byly jeszcze automatycznie sprawdzane w tym uruchomieniu. · 55 countries -->
+  </div>
+  <!-- Mapa krajów-stron Umowy ADR: JEDNA instancja, JS przenosi ją tuż nad
+       aktualnie widoczne pole wyszukiwania (patrz mountMapInActiveBlock w
+       skrypcie mapy poniżej) — dzięki temu nie ma dwóch map i podwójnych
+       zapytań o kafelki przy przełączaniu języka. -->
+  <div class="country-map-wrap" id="countryMapWrap">
+    <div id="countryMap" class="country-map" role="img" aria-label="Mapa panstw-stron Umowy ADR"></div>
+    <div class="country-map-hint" id="countryMapHint" data-hint-pl="Kliknij mapę, aby ją przewijać/przybliżać" data-hint-en="Click the map to scroll/zoom it"></div>
+  </div>
+</div>
+
+<script src="assets/leaflet/leaflet.js"></script>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('themeToggle');
+    var sun = document.getElementById('themeIconSun');
+    var moon = document.getElementById('themeIconMoon');
+
+    function systemPrefersDark() {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function currentIsDark() {
+      var t = root.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return systemPrefersDark();
+    }
+    function syncIcon() {
+      var dark = currentIsDark();
+      sun.style.display = dark ? 'none' : '';
+      moon.style.display = dark ? '' : 'none';
+    }
+    try {
+      var saved = localStorage.getItem('adrIdCheckTheme');
+      if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+    } catch (e) {}
+    syncIcon();
+
+    toggle.addEventListener('click', function () {
+      var next = currentIsDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('adrIdCheckTheme', next); } catch (e) {}
+      syncIcon();
+    });
+  })();
+
+  (function () {
+    // --- Language toggle: two full content blocks live in the DOM (both
+    // crawlable), only one is hidden via the `hidden` attribute at a time.
+    // Kept as a single file with a client-side switch per explicit request,
+    // even though two separate crawlable URLs with hreflang would normally
+    // be the stronger SEO default. The switch itself (markup/behaviour of
+    // the PL/EN buttons) matches kocie.mba's lang-switch.
+    var html = document.documentElement;
+    var blocks = {
+      pl: document.querySelector('[data-lang-block="pl"]'),
+      en: document.querySelector('[data-lang-block="en"]')
+    };
+    var tagline = document.querySelector('.brand-tagline');
+    var langSwitch = document.getElementById('langSwitch');
+    var langButtons = langSwitch.querySelectorAll('button[data-lang]');
+    var titleEl = document.querySelector('title');
+
+    function applyLang(lang) {
+      blocks.pl.hidden = lang !== 'pl';
+      blocks.en.hidden = lang !== 'en';
+      html.setAttribute('lang', lang);
+      html.classList.remove('lang-pl', 'lang-en');
+      html.classList.add('lang-' + lang);
+      tagline.textContent = lang === 'pl' ? tagline.dataset.taglinePl : tagline.dataset.taglineEn;
+      titleEl.textContent = lang === 'pl' ? langSwitch.dataset.titlePl : langSwitch.dataset.titleEn;
+      langButtons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('adrIdCheckLang', lang); } catch (e) {}
+      if (window.__adrMountMap) window.__adrMountMap();
+    }
+
+    var initial = 'pl';
+    try {
+      var saved = localStorage.getItem('adrIdCheckLang');
+      if (saved === 'pl' || saved === 'en') {
+        initial = saved;
+      } else if ((navigator.language || '').toLowerCase().indexOf('pl') !== 0) {
+        initial = 'en';
+      }
+    } catch (e) {}
+    applyLang(initial);
+
+    langButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () { applyLang(btn.dataset.lang); });
+    });
+  })();
+
+  (function () {
+    // Skalujemy logo 1:1 proporcjonalnie do wysokości docelowej — identyczna
+    // technika jak na kocie.mba, więc znak zawsze wygląda tak samo.
+    var TARGET_HEIGHT = 40;
+    function scaleLogo() {
+      var frame = document.getElementById('brandLogoFrame');
+      var logo = document.getElementById('brandLogo');
+      if (!frame || !logo) return;
+      logo.style.transform = 'scale(1)';
+      var rect = logo.getBoundingClientRect();
+      if (!rect.height) return;
+      var scale = TARGET_HEIGHT / rect.height;
+      logo.style.transform = 'scale(' + scale + ')';
+      frame.style.width = Math.round(rect.width * scale) + 'px';
+      frame.style.height = TARGET_HEIGHT + 'px';
+      frame.classList.add('ready');
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', scaleLogo);
+    } else {
+      scaleLogo();
+    }
+  })();
+
+  (function () {
+    var inputs = document.querySelectorAll('.lang-search-input');
+    inputs.forEach(function (input) {
+      var block = input.closest('.lang-content');
+      var cards = Array.prototype.slice.call(block.querySelectorAll('.country-card'));
+      var noResults = block.querySelector('.no-results');
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var visible = 0;
+        var matchedIso = [];
+        cards.forEach(function (c) {
+          var match = c.dataset.name.indexOf(q) !== -1;
+          c.style.display = match ? '' : 'none';
+          if (match) {
+            visible++;
+            if (c.dataset.iso3) matchedIso.push(c.dataset.iso3);
+          }
+        });
+        if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+        // Podświetlamy na mapie tylko sensowną liczbę trafień (kilka krajów) —
+        // przy pustym/bardzo szerokim zapytaniu wracamy do widoku ogólnego,
+        // żeby mapa nie "skakała" przy każdym wpisanym znaku.
+        if (window.__adrHighlight) {
+          window.__adrHighlight(q ? matchedIso : [], !!q && matchedIso.length > 0 && matchedIso.length <= 6);
+        }
+      });
+    });
+  })();
+
+  (function () {
+    // --- Mapa krajów-stron Umowy ADR (Leaflet + standardowe kafelki
+    // OpenStreetMap, bez klucza API; dane granic: Natural Earth, lokalny
+    // plik data/country-borders.geo.json — bez zapytań do zewnętrznych API
+    // poza samymi kafelkami mapy). Podświetlamy KONTURY pasujących krajów
+    // (nie pinezki); klik w kraj (lub dokładnie jedno trafienie w
+    // wyszukiwarce) otwiera dymek z tymi samymi przyciskami dokumentów, co
+    // karta tego kraju na liście poniżej.
+    var mapEl = document.getElementById('countryMap');
+    var mapWrap = document.getElementById('countryMapWrap');
+    var mapHint = document.getElementById('countryMapHint');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    function cssVar(name, fallback) {
+      var v = getComputedStyle(document.documentElement).getPropertyValue(name);
+      return (v && v.trim()) || fallback;
+    }
+    function isDarkTheme() {
+      var t = document.documentElement.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function syncMapTheme() {
+      mapWrap.classList.toggle('is-dark', isDarkTheme());
+    }
+
+    var map = L.map(mapEl, { scrollWheelZoom: false, worldCopyJump: true, attributionControl: true });
+    window.__adrMap = map;
+
+    // Zwykłe kafelki OpenStreetMap — darmowe, bez klucza API. OSM nie ma
+    // darmowego ciemnego wariantu bez klucza, więc tryb ciemny robimy
+    // filtrem CSS na warstwie kafelków (invert+hue-rotate) — patrz styles.css
+    // `.country-map-wrap.is-dark .leaflet-tile-pane`.
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    syncMapTheme();
+
+    // Mapa reaguje na scroll/zoom kółkiem myszy dopiero po kliknięciu w nią
+    // — inaczej przewijanie strony nad mapą byłoby "porywane" przez zoom.
+    // Podpowiedź znika po pierwszym kliknięciu.
+    mapEl.addEventListener('click', function () {
+      map.scrollWheelZoom.enable();
+      if (mapHint) mapHint.classList.add('is-hidden');
+    });
+    mapEl.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
+
+    var themeToggleBtn = document.getElementById('themeToggle');
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', function () { setTimeout(syncMapTheme, 0); });
+
+    var geoLayer = null;
+    var layersByIso = {};
+    var defaultStyle = { color: cssVar('--muted', '#98a2ad'), weight: 1, fillColor: cssVar('--muted', '#98a2ad'), fillOpacity: 0.06 };
+    var highlightStyle = { color: cssVar('--accent', '#017ffe'), weight: 2.5, fillColor: cssVar('--accent', '#017ffe'), fillOpacity: 0.35 };
+
+    fetch('data/country-borders.geo.json')
+      .then(function (r) { return r.json(); })
+      .then(function (geojson) {
+        geoLayer = L.geoJSON(geojson, {
+          style: function () { return defaultStyle; },
+          onEachFeature: function (feature, layer) {
+            layersByIso[feature.id] = layer;
+            layer.bindTooltip(feature.properties.name, { sticky: true });
+            layer.on('click', function () { highlightCountries([feature.id], true); });
+          }
+        }).addTo(map);
+        map.fitBounds(geoLayer.getBounds(), { padding: [8, 8] });
+        if (mapWrap) mapWrap.classList.add('ready');
+      })
+      .catch(function () {
+        // Offline / brak dostępu do pliku granic (np. otwarcie z dysku bez
+        // serwera) — mapa nadal pokazuje same kafelki, całość jest ukryta,
+        // żeby nie zostawiać pustego szarego prostokąta na stronie.
+        if (mapWrap) mapWrap.style.display = 'none';
+      });
+
+    // Klik w kraj (albo dokładnie jedno trafienie w wyszukiwarce) pokazuje
+    // w dymku te same przyciski dokumentów (PRADO/UNECE), co karta kraju na
+    // liście — łącznie z wyszarzonymi/wyłączonymi linkami i notatkami.
+    function showCountryDetail(iso3) {
+      var layer = layersByIso[iso3];
+      var activeBlock = document.querySelector('.lang-content:not([hidden])');
+      if (!layer || !activeBlock) return;
+      var card = activeBlock.querySelector('.country-card[data-iso3="' + iso3 + '"]');
+      if (!card) return;
+      var nameEl = card.querySelector('h3');
+      var linksEl = card.querySelector('.doc-links');
+      var notesHtml = '';
+      card.querySelectorAll('.note-missing, .note-info').forEach(function (n) { notesHtml += n.outerHTML; });
+      var html = '<div class="map-popup">' +
+        '<div class="map-popup-title">' + (nameEl ? nameEl.innerHTML : iso3) + '</div>' +
+        notesHtml +
+        '<div class="doc-links">' + (linksEl ? linksEl.innerHTML : '') + '</div>' +
+        '</div>';
+      layer.unbindPopup();
+      layer.bindPopup(html, { maxWidth: 260, className: 'country-popup' });
+      layer.openPopup();
+      if (mapHint) mapHint.classList.add('is-hidden');
+    }
+
+    function highlightCountries(isoList, fly) {
+      var isoSet = {};
+      isoList.forEach(function (i) { isoSet[i] = true; });
+      var matchedLayers = [];
+      Object.keys(layersByIso).forEach(function (iso) {
+        var layer = layersByIso[iso];
+        if (isoSet[iso]) {
+          layer.setStyle(highlightStyle);
+          layer.bringToFront();
+          matchedLayers.push(layer);
+        } else {
+          layer.setStyle(defaultStyle);
+        }
+      });
+
+      // Otwieramy dymek DOPIERO po dolocie kamery (moveend) — inaczej
+      // flyToBounds i autoPan dymka "walczą" o widok w tym samym momencie
+      // i dymek potrafi wystawać poza widoczny obszar mapy.
+      function settleDetail() {
+        if (isoList.length === 1) showCountryDetail(isoList[0]);
+        else map.closePopup();
+      }
+
+      if (fly && matchedLayers.length) {
+        map.closePopup();
+        map.once('moveend', settleDetail);
+        map.flyToBounds(L.featureGroup(matchedLayers).getBounds(), { padding: [40, 40], maxZoom: 6, duration: 0.6 });
+      } else if (!isoList.length && geoLayer) {
+        map.closePopup();
+        map.flyToBounds(geoLayer.getBounds(), { padding: [8, 8], duration: 0.6 });
+      } else {
+        settleDetail();
+      }
+    }
+    window.__adrHighlight = highlightCountries;
+
+    function mountMapInActiveBlock() {
+      var activeBlock = document.querySelector('.lang-content:not([hidden])');
+      if (!activeBlock || !mapWrap) return;
+      var searchBox = activeBlock.querySelector('.search-box');
+      if (searchBox && mapWrap.nextElementSibling !== searchBox) {
+        searchBox.parentNode.insertBefore(mapWrap, searchBox);
+      }
+      if (mapHint) {
+        var lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'pl';
+        mapHint.textContent = lang === 'pl' ? mapHint.dataset.hintPl : mapHint.dataset.hintEn;
+      }
+      setTimeout(function () { map.invalidateSize(); }, 60);
+    }
+    window.__adrMountMap = mountMapInActiveBlock;
+    mountMapInActiveBlock();
+  })();
+</script>
+</body>
+</html>

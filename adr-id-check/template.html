@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{PAGE_TITLE_PL}}</title>
+<meta name="description" content="{{META_DESCRIPTION_PL}}">
+<link rel="canonical" href="{{SELF_HREF}}">
+<meta name="theme-color" content="#0b0d10">
+<link rel="stylesheet" href="assets/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="app-header">
+  <div class="brand">
+    <a class="brand-logo-frame" id="brandLogoFrame" href="https://kocie.mba" target="_blank" rel="noopener" aria-label="kocie.mba">
+      <div class="brand-logo" id="brandLogo">
+        <span class="brand-protocol">https://</span>
+        <span class="brand-name">kocie</span>
+        <div class="brand-tld">.mba</div>
+      </div>
+    </a>
+    <span class="brand-tagline" data-tagline-pl="{{BRAND_TAGLINE_PL}}" data-tagline-en="{{BRAND_TAGLINE_EN}}">{{BRAND_TAGLINE_PL}}</span>
+  </div>
+  <div class="header-actions">
+    <button type="button" class="icon-btn" id="themeToggle" aria-label="{{THEME_TOGGLE_LABEL_PL}}" title="{{THEME_TOGGLE_LABEL_PL}}">
+      <svg id="themeIconSun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      <svg id="themeIconMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg>
+    </button>
+    <div class="lang-switch" id="langSwitch" data-title-pl="{{PAGE_TITLE_PL}}" data-title-en="{{PAGE_TITLE_EN}}">
+      <button type="button" data-lang="pl">PL</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="lang-content" data-lang-block="pl" lang="pl">
+{{CONTENT_PL}}
+  </div>
+  <div class="lang-content" data-lang-block="en" lang="en" hidden>
+{{CONTENT_EN}}
+  </div>
+  <!-- Mapa krajów-stron Umowy ADR: JEDNA instancja, JS przenosi ją tuż nad
+       aktualnie widoczne pole wyszukiwania (patrz mountMapInActiveBlock w
+       skrypcie mapy poniżej) — dzięki temu nie ma dwóch map i podwójnych
+       zapytań o kafelki przy przełączaniu języka. -->
+  <div class="country-map-wrap" id="countryMapWrap">
+    <div id="countryMap" class="country-map" role="img" aria-label="Mapa panstw-stron Umowy ADR"></div>
+    <div class="country-map-hint" id="countryMapHint" data-hint-pl="Kliknij mapę, aby ją przewijać/przybliżać" data-hint-en="Click the map to scroll/zoom it"></div>
+  </div>
+</div>
+
+<script src="assets/leaflet/leaflet.js"></script>
+<script>
+  (function () {
+    var root = document.documentElement;
+    var toggle = document.getElementById('themeToggle');
+    var sun = document.getElementById('themeIconSun');
+    var moon = document.getElementById('themeIconMoon');
+
+    function systemPrefersDark() {
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function currentIsDark() {
+      var t = root.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return systemPrefersDark();
+    }
+    function syncIcon() {
+      var dark = currentIsDark();
+      sun.style.display = dark ? 'none' : '';
+      moon.style.display = dark ? '' : 'none';
+    }
+    try {
+      var saved = localStorage.getItem('adrIdCheckTheme');
+      if (saved === 'dark' || saved === 'light') root.setAttribute('data-theme', saved);
+    } catch (e) {}
+    syncIcon();
+
+    toggle.addEventListener('click', function () {
+      var next = currentIsDark() ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('adrIdCheckTheme', next); } catch (e) {}
+      syncIcon();
+    });
+  })();
+
+  (function () {
+    // --- Language toggle: two full content blocks live in the DOM (both
+    // crawlable), only one is hidden via the `hidden` attribute at a time.
+    // Kept as a single file with a client-side switch per explicit request,
+    // even though two separate crawlable URLs with hreflang would normally
+    // be the stronger SEO default. The switch itself (markup/behaviour of
+    // the PL/EN buttons) matches kocie.mba's lang-switch.
+    var html = document.documentElement;
+    var blocks = {
+      pl: document.querySelector('[data-lang-block="pl"]'),
+      en: document.querySelector('[data-lang-block="en"]')
+    };
+    var tagline = document.querySelector('.brand-tagline');
+    var langSwitch = document.getElementById('langSwitch');
+    var langButtons = langSwitch.querySelectorAll('button[data-lang]');
+    var titleEl = document.querySelector('title');
+
+    function applyLang(lang) {
+      blocks.pl.hidden = lang !== 'pl';
+      blocks.en.hidden = lang !== 'en';
+      html.setAttribute('lang', lang);
+      html.classList.remove('lang-pl', 'lang-en');
+      html.classList.add('lang-' + lang);
+      tagline.textContent = lang === 'pl' ? tagline.dataset.taglinePl : tagline.dataset.taglineEn;
+      titleEl.textContent = lang === 'pl' ? langSwitch.dataset.titlePl : langSwitch.dataset.titleEn;
+      langButtons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem('adrIdCheckLang', lang); } catch (e) {}
+      if (window.__adrMountMap) window.__adrMountMap();
+    }
+
+    var initial = 'pl';
+    try {
+      var saved = localStorage.getItem('adrIdCheckLang');
+      if (saved === 'pl' || saved === 'en') {
+        initial = saved;
+      } else if ((navigator.language || '').toLowerCase().indexOf('pl') !== 0) {
+        initial = 'en';
+      }
+    } catch (e) {}
+    applyLang(initial);
+
+    langButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () { applyLang(btn.dataset.lang); });
+    });
+  })();
+
+  (function () {
+    // Skalujemy logo 1:1 proporcjonalnie do wysokości docelowej — identyczna
+    // technika jak na kocie.mba, więc znak zawsze wygląda tak samo.
+    var TARGET_HEIGHT = 40;
+    function scaleLogo() {
+      var frame = document.getElementById('brandLogoFrame');
+      var logo = document.getElementById('brandLogo');
+      if (!frame || !logo) return;
+      logo.style.transform = 'scale(1)';
+      var rect = logo.getBoundingClientRect();
+      if (!rect.height) return;
+      var scale = TARGET_HEIGHT / rect.height;
+      logo.style.transform = 'scale(' + scale + ')';
+      frame.style.width = Math.round(rect.width * scale) + 'px';
+      frame.style.height = TARGET_HEIGHT + 'px';
+      frame.classList.add('ready');
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', scaleLogo);
+    } else {
+      scaleLogo();
+    }
+  })();
+
+  (function () {
+    var inputs = document.querySelectorAll('.lang-search-input');
+    inputs.forEach(function (input) {
+      var block = input.closest('.lang-content');
+      var cards = Array.prototype.slice.call(block.querySelectorAll('.country-card'));
+      var noResults = block.querySelector('.no-results');
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var visible = 0;
+        var matchedIso = [];
+        cards.forEach(function (c) {
+          var match = c.dataset.name.indexOf(q) !== -1;
+          c.style.display = match ? '' : 'none';
+          if (match) {
+            visible++;
+            if (c.dataset.iso3) matchedIso.push(c.dataset.iso3);
+          }
+        });
+        if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+        // Podświetlamy na mapie tylko sensowną liczbę trafień (kilka krajów) —
+        // przy pustym/bardzo szerokim zapytaniu wracamy do widoku ogólnego,
+        // żeby mapa nie "skakała" przy każdym wpisanym znaku.
+        if (window.__adrHighlight) {
+          window.__adrHighlight(q ? matchedIso : [], !!q && matchedIso.length > 0 && matchedIso.length <= 6);
+        }
+      });
+    });
+  })();
+
+  (function () {
+    // --- Mapa krajów-stron Umowy ADR (Leaflet + standardowe kafelki
+    // OpenStreetMap, bez klucza API; dane granic: Natural Earth, lokalny
+    // plik data/country-borders.geo.json — bez zapytań do zewnętrznych API
+    // poza samymi kafelkami mapy). Podświetlamy KONTURY pasujących krajów
+    // (nie pinezki); klik w kraj (lub dokładnie jedno trafienie w
+    // wyszukiwarce) otwiera dymek z tymi samymi przyciskami dokumentów, co
+    // karta tego kraju na liście poniżej.
+    var mapEl = document.getElementById('countryMap');
+    var mapWrap = document.getElementById('countryMapWrap');
+    var mapHint = document.getElementById('countryMapHint');
+    if (!mapEl || typeof L === 'undefined') return;
+
+    function cssVar(name, fallback) {
+      var v = getComputedStyle(document.documentElement).getPropertyValue(name);
+      return (v && v.trim()) || fallback;
+    }
+    function isDarkTheme() {
+      var t = document.documentElement.getAttribute('data-theme');
+      if (t === 'dark') return true;
+      if (t === 'light') return false;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    function syncMapTheme() {
+      mapWrap.classList.toggle('is-dark', isDarkTheme());
+    }
+
+    var map = L.map(mapEl, { scrollWheelZoom: false, worldCopyJump: true, attributionControl: true });
+    window.__adrMap = map;
+
+    // Zwykłe kafelki OpenStreetMap — darmowe, bez klucza API. OSM nie ma
+    // darmowego ciemnego wariantu bez klucza, więc tryb ciemny robimy
+    // filtrem CSS na warstwie kafelków (invert+hue-rotate) — patrz styles.css
+    // `.country-map-wrap.is-dark .leaflet-tile-pane`.
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    syncMapTheme();
+
+    // Mapa reaguje na scroll/zoom kółkiem myszy dopiero po kliknięciu w nią
+    // — inaczej przewijanie strony nad mapą byłoby "porywane" przez zoom.
+    // Podpowiedź znika po pierwszym kliknięciu.
+    mapEl.addEventListener('click', function () {
+      map.scrollWheelZoom.enable();
+      if (mapHint) mapHint.classList.add('is-hidden');
+    });
+    mapEl.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
+
+    var themeToggleBtn = document.getElementById('themeToggle');
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', function () { setTimeout(syncMapTheme, 0); });
+
+    var geoLayer = null;
+    var layersByIso = {};
+    var defaultStyle = { color: cssVar('--muted', '#98a2ad'), weight: 1, fillColor: cssVar('--muted', '#98a2ad'), fillOpacity: 0.06 };
+    var highlightStyle = { color: cssVar('--accent', '#017ffe'), weight: 2.5, fillColor: cssVar('--accent', '#017ffe'), fillOpacity: 0.35 };
+
+    fetch('data/country-borders.geo.json')
+      .then(function (r) { return r.json(); })
+      .then(function (geojson) {
+        geoLayer = L.geoJSON(geojson, {
+          style: function () { return defaultStyle; },
+          onEachFeature: function (feature, layer) {
+            layersByIso[feature.id] = layer;
+            layer.bindTooltip(feature.properties.name, { sticky: true });
+            layer.on('click', function () { highlightCountries([feature.id], true); });
+          }
+        }).addTo(map);
+        map.fitBounds(geoLayer.getBounds(), { padding: [8, 8] });
+        if (mapWrap) mapWrap.classList.add('ready');
+      })
+      .catch(function () {
+        // Offline / brak dostępu do pliku granic (np. otwarcie z dysku bez
+        // serwera) — mapa nadal pokazuje same kafelki, całość jest ukryta,
+        // żeby nie zostawiać pustego szarego prostokąta na stronie.
+        if (mapWrap) mapWrap.style.display = 'none';
+      });
+
+    // Klik w kraj (albo dokładnie jedno trafienie w wyszukiwarce) pokazuje
+    // w dymku te same przyciski dokumentów (PRADO/UNECE), co karta kraju na
+    // liście — łącznie z wyszarzonymi/wyłączonymi linkami i notatkami.
+    function showCountryDetail(iso3) {
+      var layer = layersByIso[iso3];
+      var activeBlock = document.querySelector('.lang-content:not([hidden])');
+      if (!layer || !activeBlock) return;
+      var card = activeBlock.querySelector('.country-card[data-iso3="' + iso3 + '"]');
+      if (!card) return;
+      var nameEl = card.querySelector('h3');
+      var linksEl = card.querySelector('.doc-links');
+      var notesHtml = '';
+      card.querySelectorAll('.note-missing, .note-info').forEach(function (n) { notesHtml += n.outerHTML; });
+      var html = '<div class="map-popup">' +
+        '<div class="map-popup-title">' + (nameEl ? nameEl.innerHTML : iso3) + '</div>' +
+        notesHtml +
+        '<div class="doc-links">' + (linksEl ? linksEl.innerHTML : '') + '</div>' +
+        '</div>';
+      layer.unbindPopup();
+      layer.bindPopup(html, { maxWidth: 260, className: 'country-popup' });
+      layer.openPopup();
+      if (mapHint) mapHint.classList.add('is-hidden');
+    }
+
+    function highlightCountries(isoList, fly) {
+      var isoSet = {};
+      isoList.forEach(function (i) { isoSet[i] = true; });
+      var matchedLayers = [];
+      Object.keys(layersByIso).forEach(function (iso) {
+        var layer = layersByIso[iso];
+        if (isoSet[iso]) {
+          layer.setStyle(highlightStyle);
+          layer.bringToFront();
+          matchedLayers.push(layer);
+        } else {
+          layer.setStyle(defaultStyle);
+        }
+      });
+
+      // Otwieramy dymek DOPIERO po dolocie kamery (moveend) — inaczej
+      // flyToBounds i autoPan dymka "walczą" o widok w tym samym momencie
+      // i dymek potrafi wystawać poza widoczny obszar mapy.
+      function settleDetail() {
+        if (isoList.length === 1) showCountryDetail(isoList[0]);
+        else map.closePopup();
+      }
+
+      if (fly && matchedLayers.length) {
+        map.closePopup();
+        map.once('moveend', settleDetail);
+        map.flyToBounds(L.featureGroup(matchedLayers).getBounds(), { padding: [40, 40], maxZoom: 6, duration: 0.6 });
+      } else if (!isoList.length && geoLayer) {
+        map.closePopup();
+        map.flyToBounds(geoLayer.getBounds(), { padding: [8, 8], duration: 0.6 });
+      } else {
+        settleDetail();
+      }
+    }
+    window.__adrHighlight = highlightCountries;
+
+    function mountMapInActiveBlock() {
+      var activeBlock = document.querySelector('.lang-content:not([hidden])');
+      if (!activeBlock || !mapWrap) return;
+      var searchBox = activeBlock.querySelector('.search-box');
+      if (searchBox && mapWrap.nextElementSibling !== searchBox) {
+        searchBox.parentNode.insertBefore(mapWrap, searchBox);
+      }
+      if (mapHint) {
+        var lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'pl';
+        mapHint.textContent = lang === 'pl' ? mapHint.dataset.hintPl : mapHint.dataset.hintEn;
+      }
+      setTimeout(function () { map.invalidateSize(); }, 60);
+    }
+    window.__adrMountMap = mountMapInActiveBlock;
+    mountMapInActiveBlock();
+  })();
+</script>
+</body>
+</html>
